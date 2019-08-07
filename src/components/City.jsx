@@ -1,28 +1,36 @@
 import React, { Component } from "react";
-import { isPostalCode, parseJson } from "../utils/getWeather";
+import { createUrl, parseJson } from "../utils/getWeather";
 
 class City extends Component {
   state = {
-    resp: "",
+    resp: ["", ""],
     isLoading: true
   };
 
   getWeather = async val => {
-    let Api_Key = "";
-    let base_url = "https://api.openweathermap.org/data/2.5/weather";
-    let loc = val[val.length - 1] === " " ? val.substr(0, val.length - 1) : val;
-    //if value contains a space as last char, strip it
-    loc = loc.includes(" ") ? loc.replace(" ", "%20") : loc;
-    base_url = isPostalCode(loc) ? base_url + "?zip=" : base_url + "?q=";
-    base_url += loc + "&cnt=1&APPID=" + Api_Key;
-    const api_call = await fetch(base_url);
-    const response = await api_call.json();
-    const resp = parseJson(response);
+    const base_url = createUrl(val);
+    try {
+      const api_call = await fetch(base_url);
+      const response = await api_call.json();
 
-    const s = this.state;
-    s.resp = resp;
-    s.isLoading = false;
-    this.setState({ s });
+      if (response.cod === 401) {
+        const current_state = { ...this.state };
+        current_state.isLoading = false;
+        current_state.resp[0] = response.message;
+        this.setState(current_state);
+      } else {
+        const resp = parseJson(response);
+        const current_state = { ...this.state };
+        current_state.isLoading = false;
+        current_state.resp = resp;
+        this.setState(current_state);
+      }
+    } catch (err) {
+      const current_state = { ...this.state };
+      current_state.resp[0] =
+        "An error has occurred, unable to fetch data from server.";
+      this.setState(current_state);
+    }
   };
 
   async componentDidMount() {
@@ -30,9 +38,7 @@ class City extends Component {
   }
 
   render() {
-    const { isLoading } = this.state;
-
-    if (isLoading) {
+    if (this.state.isLoading) {
       return (
         <tr>
           <td>Loading ...</td>

@@ -1,14 +1,15 @@
-import React, { Component } from "react";
-
+import React from "react";
 import City from "./City";
 
-class Main extends Component {
-  state = { id: 0 };
-
+class Main extends React.PureComponent {
   render() {
     const { submitted, value } = this.props;
     if (submitted === false || value === "") {
-      return <h3>Please enter a value then hit submit!</h3>;
+      return (
+        <div style={{ display: "inline-block" }}>
+          <h3>Please enter a value then hit submit!</h3>
+        </div>
+      );
     }
 
     if (value !== "" && submitted) {

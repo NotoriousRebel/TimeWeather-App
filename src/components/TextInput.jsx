@@ -2,7 +2,7 @@ import React from "react";
 
 const TextInput = props => {
   return (
-    <div className="form-group" style={{ margin: "0 auto" }}>
+    <div className="container">
       <input
         type="text"
         className="input-group-lg"
@@ -10,7 +10,7 @@ const TextInput = props => {
           height: "100px",
           width: "600px",
           fontSize: "14pt",
-          float: "center",
+          float: "right",
           border: "1px solid #000000",
           margin: "auto",
           textAlign: "center"
