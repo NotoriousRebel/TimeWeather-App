@@ -7,7 +7,6 @@ class Weather extends Component {
     formControls: {
       name: {
         value: "",
-        placeholder: "Please enter a city or postal code",
         valid: false,
         touched: false,
         submitted: false
@@ -45,18 +44,18 @@ class Weather extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        <div className="container">
-          <div className="d-flex justify-content-between text-center">
-            <div className="p-1">
-              <div className="row">
-                <TextInput
-                  name="name"
-                  placeholder={this.state.formControls.name.placeholder}
-                  value={this.state.formControls.name.value}
-                  onChange={this.changeHandler}
-                />
+      <div className="container">
+        <div className="d-flex justify-content-between text-center">
+          <div className="p-1">
+            <div className="row">
+              <TextInput
+                name="name"
+                placeholder={"Please enter a city or postal code"}
+                value={this.state.formControls.name.value}
+                onChange={this.changeHandler}
+              />
 
+              <div className="mx-auto" style={{ width: "250px" }}>
                 <button
                   onClick={this.formSubmitHandler}
                   className="btn btn-primary btn-md"
@@ -64,15 +63,15 @@ class Weather extends Component {
                   Submit
                 </button>
               </div>
-              <br />
-              <Main
-                submitted={this.state.formControls.name.submitted}
-                value={this.state.formControls.name.value}
-              />
             </div>
+            <br />
+            <Main
+              submitted={this.state.formControls.name.submitted}
+              value={this.state.formControls.name.value}
+            />
           </div>
         </div>
-      </React.Fragment>
+      </div>
     );
   }
 }
