@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/TimeWeather-App/static/css/main.2cce8147.chunk.css",
+    "main.js": "/TimeWeather-App/static/js/main.8669475a.chunk.js",
+    "main.js.map": "/TimeWeather-App/static/js/main.8669475a.chunk.js.map",
+    "runtime~main.js": "/TimeWeather-App/static/js/runtime~main.2535e6a0.js",
+    "runtime~main.js.map": "/TimeWeather-App/static/js/runtime~main.2535e6a0.js.map",
+    "static/css/2.22a7d4ef.chunk.css": "/TimeWeather-App/static/css/2.22a7d4ef.chunk.css",
+    "static/js/2.d3be7aef.chunk.js": "/TimeWeather-App/static/js/2.d3be7aef.chunk.js",
+    "static/js/2.d3be7aef.chunk.js.map": "/TimeWeather-App/static/js/2.d3be7aef.chunk.js.map",
+    "index.html": "/TimeWeather-App/index.html",
+    "precache-manifest.968d4ea91d9dfae1d59c28cc7a9a051c.js": "/TimeWeather-App/precache-manifest.968d4ea91d9dfae1d59c28cc7a9a051c.js",
+    "service-worker.js": "/TimeWeather-App/service-worker.js",
+    "static/css/2.22a7d4ef.chunk.css.map": "/TimeWeather-App/static/css/2.22a7d4ef.chunk.css.map",
+    "static/css/main.2cce8147.chunk.css.map": "/TimeWeather-App/static/css/main.2cce8147.chunk.css.map"
+  }
+}
