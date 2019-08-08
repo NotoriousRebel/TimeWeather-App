@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "20007005e006ffb4c6e6067ff58a0390",
+    "revision": "5b028af9570b4ffe77322c9a590ab7df",
     "url": "/TimeWeather-App/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/TimeWeather-App/static/css/2.22a7d4ef.chunk.css"
   },
   {
-    "revision": "6feb231a73414490f21c",
+    "revision": "70f89aaceea740421bd9",
     "url": "/TimeWeather-App/static/css/main.2cce8147.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/TimeWeather-App/static/js/2.d3be7aef.chunk.js"
   },
   {
-    "revision": "6feb231a73414490f21c",
-    "url": "/TimeWeather-App/static/js/main.8669475a.chunk.js"
+    "revision": "70f89aaceea740421bd9",
+    "url": "/TimeWeather-App/static/js/main.7e6e702e.chunk.js"
   },
   {
     "revision": "5efcdd6c3860629753d7",
